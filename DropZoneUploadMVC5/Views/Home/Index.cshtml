@@ -57,6 +57,8 @@
                 },
                 error: function (file, response) {
                     file.previewElement.classList.add("dz-error");
+                    $(file.previewElement).find('.dz-error-message').text(response);
+                    console.log(response);
                 }
             });
 
