@@ -5,4 +5,4 @@ Multiple upload file in Asp.Net MVC5 with DropZone
 - View detail about dropzone: http://www.dropzonejs.com/
 - Or download library here: https://github.com/enyo/dropzone
 
-## Integrated dropzone into Asp.Net MVC5 Project
+## Integrate dropzone into Asp.Net MVC5 Project
