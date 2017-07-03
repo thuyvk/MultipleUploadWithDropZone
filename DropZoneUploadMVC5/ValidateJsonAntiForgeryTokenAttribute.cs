@@ -18,7 +18,7 @@ namespace DropZoneUploadMVC5
             var httpContext = filterContext.HttpContext;
             var cookie = httpContext.Request.Cookies[AntiForgeryConfig.CookieName];
             AntiForgery.Validate(cookie != null ? cookie.Value : null, 
-                httpContext.Request.Headers["_RequestVerficationToken"]);
+                httpContext.Request.Headers["__RequestVerificationToken"]);
         }
     }
 }

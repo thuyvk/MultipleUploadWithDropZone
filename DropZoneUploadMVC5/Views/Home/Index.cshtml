@@ -11,7 +11,8 @@
     <div id="dZUpload" class="dropzone">
         <div class="dz-default dz-message"></div>
     </div>
-    <a href="javascript:;" id="btnSubmit" class="btn btn-primary">Upload</a>
+    <hr />
+    <a href="javascript:;" id="btnSubmit" class="btn btn-primary btn-lg">Upload</a>
 }
 
 
@@ -19,11 +20,13 @@
     <script>
         Dropzone.autoDiscover = false;
         $(document).ready(function () {
-            var token = $('input[name="_RequestVerficationToken"]').val();
+            debugger;
+            var token = $('input[name="__RequestVerificationToken"]').val();
+            console.log(token);
             var UrlUpload = "/Home/SaveUploadFile?CategoryId=1";
             var myDropzone = new Dropzone("#dZUpload", {
                 url: UrlUpload,
-                headers: { "_RequestVerficationToken": token },
+                headers: { "__RequestVerificationToken": token },
                 maxFiles: 20,
                 addRemoveLinks: true,
                 maxFilesize: 1,

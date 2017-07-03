@@ -1,8 +1,6 @@
 ﻿using DropZoneUploadMVC5.Models;
 using System;
-using System.Collections.Generic;
 using System.IO;
-using System.Linq;
 using System.Web;
 using System.Web.Mvc;
 
@@ -15,7 +13,7 @@ namespace DropZoneUploadMVC5.Controllers
             return View();
         }
 
-        [HttpPost, ValidateJsonAntiForgeryToken]
+       [HttpPost, ValidateJsonAntiForgeryToken]
         public ActionResult SaveUploadFile(int CategoryId)
         {
             var fName = string.Empty;
